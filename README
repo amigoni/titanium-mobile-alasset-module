@@ -1,3 +1,13 @@
+======================
+This module is a Fork of ALAsset Module. 
+
+It exposes Metadata of each picture. Metadata includes Exif Info as well as GPS info for pictures taken with the iPhone. 
+Find out when a picture was taken and where as well as Exposure, Altitude and all kind of other neat info. 
+
+The module currently works in the simulator but seems to crash on device with large amount of pictures. 
+
+Help stabilize it so that it can be used extensively. 
+
 ALAsset Module for Appcelerator Titanium
 ======================
 
