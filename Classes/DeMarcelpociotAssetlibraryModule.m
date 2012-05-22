@@ -112,6 +112,7 @@
                 largeimage = [UIImage imageWithCGImage:[rep fullScreenImage]];
                 UIImage *thumbnail;
                 thumbnail   = [UIImage imageWithCGImage:[result thumbnail]];
+                NSDictionary *metadata = result.defaultRepresentation.metadata; 
                 NSDictionary *event = [NSDictionary 
                                        dictionaryWithObjectsAndKeys:
                                        [[[TiBlob alloc] initWithImage:largeimage] autorelease],
@@ -120,6 +121,8 @@
                                        @"thumbnail",
                                        sUrl,
                                        @"url",
+                                       metadata,
+                                       @"metadata",
                                        nil];
                 if (assetUrlCallback!=nil)
                 {
@@ -238,6 +241,7 @@
                         largeimage = [UIImage imageWithCGImage:iref];
                         UIImage *thumbnail;
                         thumbnail   = [UIImage imageWithCGImage:[result thumbnail]];
+                        NSDictionary *metadata = result.defaultRepresentation.metadata; 
                         NSDictionary *event = [NSDictionary 
                                                dictionaryWithObjectsAndKeys:
                                                [[[TiBlob alloc] initWithImage:largeimage] autorelease],
@@ -248,6 +252,8 @@
                                                @"index",
                                                sUrl,
                                                @"url",
+                                               metadata,
+                                               @"metadata",
                                                nil];
                         if (loadedCallback!=nil)
                         {
@@ -305,6 +311,7 @@
                     if( (index >= fromIndex) && (index <= toIndex) ){
                         NSURL *url = [[result defaultRepresentation] url];
                         NSString *sUrl = [url absoluteString];
+                        NSDictionary *metadata = result.defaultRepresentation.metadata; 
                             UIImage *thumbnail = [UIImage imageWithCGImage:[result thumbnail]];
                             NSDictionary *event = [NSDictionary 
                                                    dictionaryWithObjectsAndKeys:
@@ -314,6 +321,8 @@
                                                    @"index",
                                                    sUrl,
                                                    @"url",
+                                                   metadata,
+                                                   @"metadata",
                                                    nil];
                             [assets addObject:event];
                     }
@@ -371,6 +380,7 @@
                         NSURL *url = [[result defaultRepresentation] url];
                         NSString *sUrl = [url absoluteString];
                         UIImage *thumbnail = [UIImage imageWithCGImage:[result thumbnail]];
+                        NSDictionary *metadata = result.defaultRepresentation.metadata; 
                         NSDictionary *event = [NSDictionary 
                                                dictionaryWithObjectsAndKeys:
                                                [[[TiBlob alloc] initWithImage:thumbnail] autorelease],
@@ -379,6 +389,8 @@
                                                @"index",
                                                sUrl,
                                                @"url",
+                                               metadata,
+                                               @"metadata",
                                                nil];
                         [assets addObject:event];
                 } else {
