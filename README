@@ -1,5 +1,5 @@
 ======================
-This module is a Fork of ALAsset Module. 
+This module is a Fork of ALAsset Module from mpociot.
 
 It exposes Metadata of each picture. Metadata includes Exif Info as well as GPS info for pictures taken with the iPhone. 
 Find out when a picture was taken and where as well as Exposure, Altitude and all kind of other neat info. 
